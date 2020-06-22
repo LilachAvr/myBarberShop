@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Modal, Button} from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 
-class SelectManagerType extends Component {
+
+class updateforClients extends Component {
     state = {isEmployee:false,isBusinessManager:false}
 
     render() {
@@ -33,7 +34,6 @@ class SelectManagerType extends Component {
               </Button>
                 </Modal.Body>
                 <Modal.Footer>
-                    <img src='https://www.freepik.com/premium-vector/men-hair-moustache-styling-vintage-gentleman-haircut-beauty-beard-fashion-mustaches-styles-illustration-set_8636976.htm' alt=''/>
                     <Button variant='danger' onClick={this.props.onHide}>חזור</Button>
                 </Modal.Footer>
             </Modal >
@@ -42,4 +42,4 @@ class SelectManagerType extends Component {
     }
 }
 
-export default SelectManagerType;
+export default updateforClients;

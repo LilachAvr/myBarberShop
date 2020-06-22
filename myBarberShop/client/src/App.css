@@ -10,8 +10,9 @@ body{
 #root {
   /* text-align: center; */
   background-size: cover;
-  background-image: url(/SharedScreenshot4.jpg);
-  /* background-color: black; */
+  /* background-image: url(/SharedScreenshot4.jpg); */
+  background: linear-gradient(#141e30, #243b55);
+
   height: 100vh;
   /* max-width: 138%; */
   /* background-attachment: fixed; */
@@ -110,7 +111,8 @@ body{
    text-decoration: none;
 }
 .navbar.navbar-expand-lg.navbar-light.bg-transparent{
-  background-color: #88040479!important;
+  /* background-color: #88040479!important; */
+  background: linear-gradient(#141e30, #243b55);
 }
 span.nav-link {
   /* font-size: 16px; */

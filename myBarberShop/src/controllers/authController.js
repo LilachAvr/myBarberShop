@@ -202,9 +202,6 @@ router.get("/uploadImg", (req, res) => {
 }
 )
 
-
-
-
 ////////////////////////// setting queues ///////////////////////////////
 
 router.post("/queues/scheduledCustomerQueues", (req, res) => {

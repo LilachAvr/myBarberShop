@@ -69,31 +69,33 @@ class SignIn extends Component {
 
     render() {
         const disabled = !this.state.phone || !this.state.password
-        
+       
         return (
             <div>
 
                 {this.state.flag ?
                     <Redirect to='/Home1' />
                     : ''}
-                <div className="form-style-6">
+                <div class="login-box">
                     <h1>לקוח קיים</h1>
                     <form>
-                        <div>
-                            <input type="number" className="form-control" id="exampleInputphone1" aria-describedby="phoneHelp" placeholder='טלפון נייד'
+                        <div className='user-box'>
+                            <input type="text"  id="exampleInputphone1" aria-describedby="phoneHelp" placeholder='טלפון נייד'
                                 onChange={event => this.setState({ phone: event.target.value })} required />
                             <small id="phoneHelp" className="form-text text-muted">We'll never share your phone with anyone else.</small>
                         </div>
-                        <div className="form-group">
-                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder='password'
+                        <div className='user-box'>
+                            <input type="password"  id="exampleInputPassword1" placeholder='password'
                                 onChange={event => this.setState({ password: event.target.value })} />
                         </div>
-                        <button disabled={disabled} type="button" className="btn btn-outline-secondary"
+                      
+                        <button disabled={disabled} type="button" className="button-login"
                             onClick={() => {
                                 this.login()
                                 // this.getDetilsFromUserToken()
                             }}
                         >Sign - In</button>
+           
 
                         {this.state.isError ? <p style={{ color: 'red' }}>login error</p> : ''}
 
@@ -102,6 +104,7 @@ class SignIn extends Component {
                         <p className='forgotPassword'>forgot your password</p>
 
                     </form>
+                   
                 </div>
             </div>
         )

@@ -7,7 +7,7 @@ import moment from 'moment';
 class SettingQueues extends Component {
 
     state = {
-        dateChoosen: false, barberChoosen: false, styleChoosen: false,
+        selectStyleChoosen: false, dateChoosen: false, barberChoosen: false, styleChoosen: false,
         timesAlreadySet: '', timesList: [], flag: false, added: false, dateValue: '', selectValue: new Date(), selectStyle: '', chooseBarber: '', allQueues: [], filterQueues: [], alertError: false, alertSuccess: false, showUpdateTimes: [],
         times: [
             { time: '11:00' },
@@ -234,6 +234,8 @@ class SettingQueues extends Component {
                             <option >worker</option>
                             <option >admin</option>
                         </select>
+                        <br /><br />
+
                         {this.state.barberChoosen ? <input id='calendar' type="date" name="date"
                             onChange={(e) => {
                                 this.selectValue = e.target.value;
@@ -241,7 +243,7 @@ class SettingQueues extends Component {
                                 this.filtTimes()
                             }}
                             min={this.today1} max={this.newformat} /> : ''}
-
+                        <br /><br />
 
                         {this.state.dateChoosen ?
                             <select onChange={(e) => { this.dateValue = e.target.value; this.setState({ styleChoosen: true }) }}>
@@ -253,9 +255,9 @@ class SettingQueues extends Component {
                                 )}
                             </select>
                             : ''}
-
+                        <br /><br />
                         {this.state.styleChoosen ?
-                            <select onChange={(e) => { this.selectStyle = e.target.value }}>
+                            <select onChange={(e) => { this.selectStyle = e.target.value; this.setState({ selectStyleChoosen: true }) }}>
                                 <option ></option>
                                 <option>תספורת רגילה</option>
                                 <option>תספורת+צבע</option>
@@ -264,10 +266,11 @@ class SettingQueues extends Component {
                                 <option>תספורת+ציורים</option>
                             </select>
                             : ''}
+                        <br /><br />
 
-                    </div>
-                    <div>
-                        <button type='button' onClick={this.scheduledCustomerQueues}>קבע תור</button>
+                        {this.state.selectStyleChoosen ?
+                            <button type='button' onClick={this.scheduledCustomerQueues}>קבע תור</button>
+                            : ''}
                     </div>
                 </div >
                 <div className='listQueues'>

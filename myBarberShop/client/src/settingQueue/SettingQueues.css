@@ -1,10 +1,10 @@
-.settingQueues{
+/* .settingQueues{
     background-color: rgb(197, 196, 196);
     border: 1px solid black;
     display: inline-table;
     width: 200px;
     height: 200px;
-}
+} */
 .alert-dismissible .close {
     position: absolute;
     top: 0;
@@ -75,33 +75,27 @@ button:hover{
     width: 60%;
     margin: auto;
 }
-
-button, input, optgroup, select, textarea {
-    margin: 5px;
-    /* font-family: inherit; */
-    /* font-size: inherit; */
-    /* line-height: inherit; */
-    border-radius: 11px;
-    border: none;
-    /* width: 12%; */
-    /* height: 32%; */
-    font-size: large;
+select {
+    word-wrap: normal;
+    width: 100%;
+    height: 38px;
 }
-.settingQ {
+
+/* .settingQ {
     text-align: center;
     margin: 2% 35%;
     padding: 1%;
     /* background-image: url(/border.png); */
-    background-color: #8b775cb5;
+    /* background-color: #8b775cb5;
     border-radius: 0 0 0 -19px;
     border: 13px solid #bbaf99;
     border-radius: 17px;
-}
+} */ */
 
-button:hover {
+/* button:hover {
     color: #fffaef;
     background-color: #7b5d39;
-}
+} */
 
 .table .thead-light th {
     color: #495057;
@@ -122,16 +116,16 @@ margin-bottom: 0.5em;
 
 
 
-.settingQ {
+/* .settingQ {
 text-align: center;
 margin: 2% 35% 4% 35%;
 padding: 1%;
 /* background-image: url(/border.png); */
-background-color: #8b775cb5;
+/* background-color: #8b775cb5;
 border-radius: 0 0 0 -19px;
 border: 13px solid #bbaf99;
 border-radius: 17px;
-}
+} */ 
 
 
 .dms-calendar-booking .mbsc-cal-txt.mbsc-hover:before {
@@ -147,4 +141,22 @@ border-radius: 17px;
 }
 
 
+#calendar{
+    width: 100%;
+    height: 41px;
+}
 
+
+
+.settingQ {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    max-width: 400px;
+    padding: 20px;
+    /* transform: translate(-50%, -50%); */
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}

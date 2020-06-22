@@ -50,12 +50,6 @@ class S extends Component {
         return (
             <div>
 
-
-                {this.renderDate()}
-
-                <div>
-                    {this.renderTime(this.state.selectValue)}
-                </div>
             </div>
         );
     }
